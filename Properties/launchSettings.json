@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Prank (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Prank (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

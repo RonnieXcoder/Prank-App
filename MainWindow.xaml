@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Prank.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Prank"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid RowDefinitions="Auto, Auto, *, *, *, *, *"  ColumnDefinitions="*, *">
+
+        <Grid.Resources>
+            <LinearGradientBrush x:Key="GradientBrush" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="LightBlue" Offset="0"/>
+                <GradientStop Color="DarkBlue" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Resources>
+        <Grid.Background>
+            <StaticResource ResourceKey="GradientBrush"/>
+        </Grid.Background>
+        <Image Grid.Row="0" Grid.ColumnSpan="2" Source="D:\YouTube\Prank\prank.jpg" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="160" Stretch="Fill" Margin="0,0,0,10"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center">
+            <Button x:Name="FreezingButton" Content="Freezing" Click="PreviewButton_Click"/>
+            <Button x:Name="UpsideDownButton" Content="Upside down" Click="PreviewButton_Click"/>
+            <Button x:Name="RandomColorButton" Content="Random color" Click="PreviewButton_Click"/>
+            <Button x:Name="EarthquakeButton" Content="Earthquake" Click="PreviewButton_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center">
+            <Button x:Name="SnowButton" Content="Snow" Click="PreviewButton_Click"/>
+            <Button x:Name="LinesButton" Content="Lines" Click="PreviewButton_Click"/>
+            <Button x:Name="PuzzleButton" Content="Puzzle" Click="PreviewButton_Click"/>
+            <Button x:Name="ScreenOfDeathButton" Content="Screen of death" Click="PreviewButton_Click"/>
+        </StackPanel>
+
+        <ToggleButton Content="Start on system startup" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="170" Click="StartupToggleButton_Click"/>
+
+        <ComboBox x:Name="ComboBox" PlaceholderText="Choose an option" Grid.Row="3" Grid.ColumnSpan="2" Width="170" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <x:String>Freezing</x:String>
+            <x:String>Upside down</x:String>
+            <x:String>Random color</x:String>
+            <x:String>Earthquake</x:String>
+            <x:String>Snow</x:String>
+            <x:String>Lines</x:String>
+            <x:String>Puzzle</x:String>
+            <x:String>Screen of death</x:String>
+        </ComboBox>
+
+        <Viewbox Grid.Row="4" Grid.ColumnSpan="2" MaxWidth="170" MaxHeight="34" Stretch="Fill" HorizontalAlignment="Center">
+            <TimePicker x:Name="TimePicker" ClockIdentifier="24HourClock" HorizontalAlignment="Center"/>
+        </Viewbox>
+
+        <ToggleButton x:Name="StartTimerButton" Content="Start Timer" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="170" Click="StartTimerButton_Click"/>
+
+        <TextBlock x:Name="TimeBlock" Grid.Row="6" Grid.ColumnSpan="2" FontSize="20" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <Button x:Name="HideToTrayButton" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="20" Height="20" Click="HideToTrayButton_Click"/>
+    </Grid>
+    
+</Window>
