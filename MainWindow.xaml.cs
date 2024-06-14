@@ -10,6 +10,9 @@ using Windows.Devices.Display;
 using System.Linq;
 using System.Threading.Tasks;
 
+// If you enjoy this project, you can support it by making a donation!
+// Donation link: https://buymeacoffee.com/_ronniexcoder
+
 namespace Prank
 {
 
